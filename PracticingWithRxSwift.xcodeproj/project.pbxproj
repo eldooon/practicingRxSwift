@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10EE8D6BC812B0C2A1BF737C /* Pods_PracticingWithRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4786228201DED855128A008E /* Pods_PracticingWithRxSwift.framework */; };
 		BE3E684620AF67BE003C2E8D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E684520AF67BE003C2E8D /* SearchViewController.swift */; };
+		BE3E684820AF6DB1003C2E8D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E684720AF6DB1003C2E8D /* APIClient.swift */; };
 		BE8773B120AE366E000337ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8773B020AE366E000337ED /* AppDelegate.swift */; };
 		BE8773B320AE366E000337ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8773B220AE366E000337ED /* ViewController.swift */; };
 		BE8773B620AE366F000337ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8773B420AE366F000337ED /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		4786228201DED855128A008E /* Pods_PracticingWithRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticingWithRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB0547C9B90EE7B7A08A474 /* Pods-PracticingWithRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticingWithRxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticingWithRxSwift/Pods-PracticingWithRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		BE3E684520AF67BE003C2E8D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BE3E684720AF6DB1003C2E8D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BE8773AD20AE366E000337ED /* PracticingWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticingWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8773B020AE366E000337ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE8773B220AE366E000337ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		BE8773AF20AE366E000337ED /* PracticingWithRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BE3E684720AF6DB1003C2E8D /* APIClient.swift */,
 				BE8773B020AE366E000337ED /* AppDelegate.swift */,
 				BE8773B220AE366E000337ED /* ViewController.swift */,
 				BE3E684520AF67BE003C2E8D /* SearchViewController.swift */,
@@ -185,11 +188,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PracticingWithRxSwift/Pods-PracticingWithRxSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -208,6 +213,7 @@
 				BE3E684620AF67BE003C2E8D /* SearchViewController.swift in Sources */,
 				BE8773B320AE366E000337ED /* ViewController.swift in Sources */,
 				BE8773B120AE366E000337ED /* AppDelegate.swift in Sources */,
+				BE3E684820AF6DB1003C2E8D /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6364VX67;
 				INFOPLIST_FILE = PracticingWithRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByEldon.PracticingWithRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -374,10 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6364VX67;
 				INFOPLIST_FILE = PracticingWithRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByEldon.PracticingWithRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
